@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Free Event Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+    }
+    form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    #message {
+      margin-top: 20px;
+      color: red;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+</head>
+<body>
 
+  <h2>Register for Our Free Security Webinar</h2>
+  <form id="demoForm">
+    <input type="text" id="name" placeholder="Full Name" required />
+    <input type="date" id="dob" required />
+    <button type="submit">Register Now</button>
+  </form>
+
+  <div id="message">
+    See how easy it is to give away personal information?<br>
+    This was a demo — no data was stored.
+  </div>
+
+  <script>
+    document.getElementById('demoForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('demoForm').style.display = 'none';
+      document.getElementById('message').style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
